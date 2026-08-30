@@ -464,6 +464,25 @@ details .answer > :last-child {
   margin-bottom: 0;
 }
 
+/* ---- Code blocks (FAQ import templates) ---- */
+pre {
+  background: var(--surface-raised);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-small);
+  padding: 16px 18px;
+  overflow-x: auto;
+  margin: 0 0 18px;
+}
+
+pre code {
+  display: block;
+  color: var(--text);
+  background: none;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  white-space: pre;
+}
+
 /* ---- Definition-style rows (privacy "what/where") ---- */
 .rows {
   border-top: 1px solid var(--hairline);

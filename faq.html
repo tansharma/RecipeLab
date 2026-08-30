@@ -128,6 +128,87 @@
     </details>
 
     <details>
+      <summary>What format does an import file need to be in?</summary>
+      <div class="answer">
+        <p>Plain JSON, in one of two shapes depending on which button you use. There's no way to hand-author an encrypted backup — that path only accepts a file this app produced itself — but both of the plain formats below can be written by hand if you're building your own tooling.</p>
+
+        <p><strong>"Import Variations"</strong> expects a JSON array, one or more entries:</p>
+<pre><code>[
+  {
+    "id": "var__1735689600000_a1b2",
+    "parentKey": "m10-rich",
+    "name": "My Rainy Day Look",
+    "createdAt": 1735689600000,
+    "data": {
+      "title": "My Rainy Day Look",
+      "film": "Classic Chrome",
+      "dr": "DR200",
+      "wb": "R: -1, B: +2",
+      "high": "-1",
+      "shad": "+2",
+      "color": "-1",
+      "sharp": "+1",
+      "nr": "-4",
+      "grain": "Weak",
+      "chrome_blue": "Off",
+      "tip": "A custom tweak for overcast city streets.",
+      "category": "variation",
+      "compatibility": ["x-trans-3", "x-trans-4", "x-trans-5"],
+      "tags": ["custom", "overcast"]
+    }
+  }
+]</code></pre>
+
+        <p><strong>"Import .rlr"</strong> expects a single object — the same <code>data</code> shape, wrapped differently:</p>
+<pre><code>{
+  "version": 1,
+  "exported_at": 1735689600000,
+  "id": "var__1735689600000_a1b2",
+  "name": "My Rainy Day Look",
+  "parentKey": "m10-rich",
+  "createdAt": 1735689600000,
+  "data": {
+    "title": "My Rainy Day Look",
+    "film": "Classic Chrome",
+    "dr": "DR200",
+    "wb": "R: -1, B: +2",
+    "high": "-1",
+    "shad": "+2",
+    "color": "-1",
+    "sharp": "+1",
+    "nr": "-4",
+    "grain": "Weak",
+    "chrome_blue": "Off",
+    "tip": "A custom tweak for overcast city streets.",
+    "category": "variation",
+    "compatibility": ["x-trans-3", "x-trans-4", "x-trans-5"],
+    "tags": ["custom", "overcast"]
+  }
+}</code></pre>
+
+        <p>Field notes:</p>
+        <dl class="rows">
+          <div class="row"><dt>id</dt><dd>Non-empty, ≤80 characters. The convention is <code>var__&lt;epoch-ms&gt;_&lt;4 random chars&gt;</code>, but any unique string works.</dd></div>
+          <div class="row"><dt>name</dt><dd>Non-empty, ≤80 characters — shown in the app's UI.</dd></div>
+          <div class="row"><dt>parentKey</dt><dd>Optional. The bundled recipe key this was forked from (e.g. <code>m10-rich</code>), or omit it if standalone.</dd></div>
+          <div class="row"><dt>createdAt / exported_at</dt><dd>Epoch <strong>milliseconds</strong>, not seconds and not an ISO date string.</dd></div>
+          <div class="row"><dt>dr</dt><dd><code>"DR100"</code>, <code>"DR200"</code>, or <code>"DR400"</code>.</dd></div>
+          <div class="row"><dt>high / shad / nr</dt><dd>Signed strings, <code>"-4"</code> to <code>"+4"</code>.</dd></div>
+          <div class="row"><dt>sharp</dt><dd>Signed string, <code>"-2"</code> to <code>"+4"</code> — a narrower range than the others.</dd></div>
+          <div class="row"><dt>color</dt><dd>Signed string, <code>"-4"</code> to <code>"+4"</code>, or <code>"N/A"</code> for a monochrome film.</dd></div>
+          <div class="row"><dt>wb</dt><dd><code>"R: &lt;signed&gt;, B: &lt;signed&gt;"</code>, or <code>"N/A"</code> for monochrome.</dd></div>
+          <div class="row"><dt>grain</dt><dd><code>"None"</code>, <code>"Weak"</code>, or <code>"Strong"</code>.</dd></div>
+          <div class="row"><dt>chrome_blue</dt><dd>Note the underscore — <code>"Off"</code>, <code>"Weak"</code>, or <code>"Strong"</code>.</dd></div>
+          <div class="row"><dt>compatibility</dt><dd>Array of sensor-generation ids: <code>x-trans-2</code>, <code>x-trans-3</code>, <code>x-trans-4</code>, <code>x-trans-5</code>, <code>gfx-50</code>, <code>gfx-100</code>, <code>gfx-100-ii</code>.</dd></div>
+          <div class="row"><dt>tags</dt><dd>Free-form strings, capped at 50 entries of 200 characters each.</dd></div>
+          <div class="row"><dt>title, tip, category</dt><dd>Free-form strings, capped at 200 characters each.</dd></div>
+        </dl>
+
+        <p>One asymmetry worth knowing: <code>.rlr</code> requires <code>title</code>, <code>film</code>, <code>dr</code>, <code>high</code>, <code>shad</code> and <code>nr</code> to be present in <code>data</code>, and names the specific missing field if one isn't. "Import Variations" enforces no such requirement — only <code>id</code>/<code>name</code> are checked, so a variation missing a field still imports, just blank in the app.</p>
+      </div>
+    </details>
+
+    <details>
       <summary>Is RecipeLab affiliated with Fujifilm, or with any camera or film brand?</summary>
       <div class="answer">
         <p>No. RecipeLab is an independent reference app. It names real cameras and film stocks because that's what the settings are calibrated against, but it isn't affiliated with, endorsed by, or sponsored by Fujifilm or any other camera or film manufacturer mentioned in the app.</p>
