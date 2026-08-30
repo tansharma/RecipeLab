@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ — RecipeLab</title>
+<meta name="description" content="Common questions about RecipeLab: how Smart Sort works, what Vibe Builder sends anywhere (nothing), syncing, and getting your data out.">
+<meta name="color-scheme" content="dark light">
+<link rel="icon" href="./assets/favicon-64.png" sizes="64x64">
+<link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+<link rel="stylesheet" href="./recipelab.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="shell site-header__inner">
+    <a class="wordmark" href="./index.html" aria-label="RecipeLab home">
+      <span class="wordmark__text">RECIPE LAB</span>
+      <span class="wordmark__rule"></span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="./features.html">Features</a>
+      <a href="./faq.html" aria-current="page">FAQ</a>
+      <a href="./support.html">Support</a>
+      <a href="./privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="shell">
+
+    <p class="meta meta--accent">FREQUENTLY ASKED</p>
+    <h1>Questions</h1>
+    <p class="lede">If your question isn't here, the <a href="./support.html">support page</a> has a way to reach a human.</p>
+
+    <h2>Getting started</h2>
+
+    <details>
+      <summary>What is RecipeLab, exactly?</summary>
+      <div class="answer">
+        <p>A reference app for Fujifilm's custom image-quality settings — the ones you save to a numbered slot in camera. Instead of trial and error, RecipeLab gives you 47 built-in starting points, each engineered against a real film stock or a rangefinder-inspired look, and checked against your specific camera's hardware limits.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Do I need a specific Fujifilm camera?</summary>
+      <div class="answer">
+        <p>No, but which recipes are fully usable depends on your sensor generation — older X-Trans sensors can't do everything newer ones can (Acros, Clarity and Colour Chrome Blue are progressively newer additions). Select your camera in the app and Smart Sort reorders the library: what's fully compatible, what needs a substitution, and what genuinely can't be done on your body, with the reason stated for each.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Do I need an account?</summary>
+      <div class="answer">
+        <p>No. There's no sign-up and no login. If you turn on iCloud Sync, it works through your own iCloud account — nothing else is needed.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Does it work offline?</summary>
+      <div class="answer">
+        <p>Yes. The recipe library is bundled with the app, your own variations and collections are stored on the device, and Vibe Builder's generation runs entirely on-device. Only iCloud Sync needs a connection, and that's opt-in.</p>
+      </div>
+    </details>
+
+    <h2>Recipes</h2>
+
+    <details>
+      <summary>What's the difference between Inspired and Film Stock?</summary>
+      <div class="answer">
+        <p>Inspired recipes reference a rangefinder body or shooting era — the tonal character, not a literal reproduction. Film Stock recipes are matched to the character of a specific film emulation, like Tri-X or Portra 400, using Fujifilm's own film simulations as the base.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>What do the badges on a setting mean?</summary>
+      <div class="answer">
+        <p>Tap any badge on a loaded recipe to read the reasoning behind that specific value — why the shadows are lifted, why that grain level, why that film simulation. It's not a repeat of the value; it's the "why."</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>What is "the −4 Rule"?</summary>
+      <div class="answer">
+        <p>Every recipe sets Noise Reduction to −4. Fujifilm ships cameras at 0, which is far cleaner than film ever looked. Pulling it down lets the sensor's own noise read as organic grain instead of digital smoothing.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Can I make a recipe my own?</summary>
+      <div class="answer">
+        <p>Yes — Tweak any recipe into a saved Variation. Fields your camera can't support are disabled rather than silently accepted. Variations, Collections and edit history are all yours to manage from there.</p>
+      </div>
+    </details>
+
+    <h2>Vibe Builder</h2>
+
+    <details>
+      <summary>What is Vibe Builder, and where does my prompt go?</summary>
+      <div class="answer">
+        <p>Describe a mood — "moody street portraits at dusk" — and Vibe Builder generates a recipe for you. It runs entirely on Apple's on-device Foundation Models framework. Nothing about your prompt, your camera, or the result is sent anywhere. There is currently no cloud option at all in the app.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Why is Vibe Builder unavailable on my device?</summary>
+      <div class="answer">
+        <p>On-device generation needs Apple Intelligence, which needs specific hardware and an explicit setting turned on. If it's unavailable, the app tells you which of those is the reason — unsupported hardware, Apple Intelligence off, or the on-device model still downloading — rather than a single unhelpful "not available."</p>
+      </div>
+    </details>
+
+    <h2>Your data</h2>
+
+    <details>
+      <summary>Where is my data stored?</summary>
+      <div class="answer">
+        <p>On your device. If you turn on iCloud Sync, your variations, collections, notes, camera-slot assignments and history also sync to the private database of your own iCloud account — never the bundled recipe library, which stays a read-only part of the app itself. See the <a href="./privacy.html">privacy policy</a> for the full detail.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Can I get my variations out, or move them to another device by hand?</summary>
+      <div class="answer">
+        <p>Yes — export your variations locally, in plain or passphrase-encrypted form, from Settings. You can also import a backup, or a single recipe file someone shares with you.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Is RecipeLab affiliated with Fujifilm, or with any camera or film brand?</summary>
+      <div class="answer">
+        <p>No. RecipeLab is an independent reference app. It names real cameras and film stocks because that's what the settings are calibrated against, but it isn't affiliated with, endorsed by, or sponsored by Fujifilm or any other camera or film manufacturer mentioned in the app.</p>
+      </div>
+    </details>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <p>RecipeLab — a reference for dialling in Fujifilm settings, inspired by analogue photography.</p>
+    <p>© 2026. <a href="./index.html">Home</a> · <a href="./features.html">Features</a> · <a href="./privacy.html">Privacy</a> · <a href="./support.html">Support</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

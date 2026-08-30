@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — RecipeLab</title>
+<meta name="description" content="Get help with RecipeLab: how to report a problem, what to include, and where to check first.">
+<meta name="color-scheme" content="dark light">
+<link rel="icon" href="./assets/favicon-64.png" sizes="64x64">
+<link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+<link rel="stylesheet" href="./recipelab.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="shell site-header__inner">
+    <a class="wordmark" href="./index.html" aria-label="RecipeLab home">
+      <span class="wordmark__text">RECIPE LAB</span>
+      <span class="wordmark__rule"></span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="./features.html">Features</a>
+      <a href="./faq.html">FAQ</a>
+      <a href="./support.html" aria-current="page">Support</a>
+      <a href="./privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="shell">
+
+    <p class="meta meta--accent">SUPPORT</p>
+    <h1>Something not working?</h1>
+    <p class="lede">RecipeLab is made by one developer, so mail gets read by the person who can actually fix the thing. A reply usually takes a couple of days.</p>
+
+    <div class="actions">
+      <a class="button-accent" href="mailto:YOUR-SUPPORT-EMAIL@example.com?subject=RecipeLab%20support">Email support</a>
+      <a class="button-outline" href="./faq.html">Check the FAQ first</a>
+    </div>
+
+    <h2>What to include</h2>
+    <p>A bug is much quicker to fix with a little context. Where you can, mention:</p>
+    <ul>
+      <li>Your device and OS version — iPhone 16 Pro on iOS 26.1, for example.</li>
+      <li>Your camera's sensor generation, if the issue involves compatibility or a recipe's settings.</li>
+      <li>The RecipeLab version, shown at the bottom of About Recipe Lab in Settings.</li>
+      <li>What you expected to happen, and what happened instead.</li>
+      <li>If it involves a specific recipe, its name and which camera you had selected.</li>
+      <li>A screenshot, if it's something you can see.</li>
+    </ul>
+
+    <h2>Things worth trying first</h2>
+
+    <div class="card">
+      <h3>A setting looks wrong or greyed out for my camera</h3>
+      <p>That's usually Smart Sort's compatibility logic, not a bug — older sensor generations can't do everything newer ones can (Acros, Clarity and Colour Chrome Blue are progressively newer additions). Tap the setting's badge to see the specific reason it was adapted or disabled for your camera.</p>
+    </div>
+
+    <div class="card">
+      <h3>Vibe Builder says it's unavailable</h3>
+      <p>On-device generation needs Apple Intelligence turned on and supported hardware. The app names the specific reason — unsupported hardware, Apple Intelligence off, or the model still downloading — check that message first.</p>
+    </div>
+
+    <div class="card">
+      <h3>My variations aren't showing up on another device</h3>
+      <p>Confirm iCloud Sync is turned on in Settings on both devices, and that both are signed in to the same iCloud account. Syncing is handled by iCloud and can lag a little after a large import.</p>
+    </div>
+
+    <div class="card">
+      <h3>An import didn't work</h3>
+      <p>Local Export produces a plain JSON file; Local Export (Encrypted) requires the same passphrase to import back in. A ".rlr" file is a single shared recipe, not a full backup — use "Import Variations" for a backup file and "Import .rlr" for a single recipe file.</p>
+    </div>
+
+    <h2>Feature requests</h2>
+    <p>Genuinely welcome, and the same address works. Telling us what you were trying to do is more useful than proposing the fix — the underlying problem often has a better solution than the one that first comes to mind.</p>
+
+    <h2>Privacy questions</h2>
+    <p>The <a href="./privacy.html">privacy policy</a> covers what is stored, where it lives, and the one setting that sends anything off your device. Anything it doesn't answer, please ask.</p>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <p>RecipeLab — a reference for dialling in Fujifilm settings, inspired by analogue photography.</p>
+    <p>© 2026. <a href="./index.html">Home</a> · <a href="./faq.html">FAQ</a> · <a href="./privacy.html">Privacy</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
